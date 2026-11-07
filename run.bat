@@ -128,6 +128,9 @@ if not exist "frontend\dist\index.html" (
 echo.
 echo [5/5] إطلاق خادم عَتاد وفتح المتصفح...
 
+if "%PORT%"=="" (
+    for /f %%p in ('python -c "import socket; print((lambda: next(p for p in range(8000, 8050) if (lambda s: (s.connect_ex(('127.0.0.1', p)) != 0 and (s.close() or True)))(socket.socket())))())"') do set PORT=%%p
+)
 if "%PORT%"=="" set PORT=8000
 
 echo.

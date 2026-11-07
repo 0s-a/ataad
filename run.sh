@@ -146,13 +146,25 @@ if [ -z "$LAN_IP" ]; then
     LAN_IP="127.0.0.1"
 fi
 
-# التحقق مما إذا كان المنفذ مستخدماً
-if command -v ss >/dev/null 2>&1; then
-    if ss -tuln | grep -q ":$PORT "; then
-        echo -e "${YELLOW}⚠️  تنبيه: المنفذ $PORT يبدو قيد الاستخدام حالياً!${NC}"
-        echo -e "   يمكنك تشغيل الخادم على منفذ آخر عبر تمرير المتغير PORT، مثال:"
-        echo -e "   ${BOLD}PORT=8080 ./run.sh${NC}\n"
-    fi
+# التحقق مما إذا كان المنفذ مستخدماً والبحث عن منفذ متاح تلقائياً
+ORIGINAL_PORT="$PORT"
+PORT=$(python3 -c "
+import socket
+def get_free_port(start):
+    for p in range(start, start + 50):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            try:
+                s.bind(('0.0.0.0', p))
+                return p
+            except OSError:
+                continue
+    return start
+print(get_free_port($ORIGINAL_PORT))
+")
+
+if [ "$PORT" != "$ORIGINAL_PORT" ]; then
+    echo -e "${YELLOW}⚠️  تنبيه: المنفذ $ORIGINAL_PORT مشغول حالياً بواسطة عملية أخرى في جهازك.${NC}"
+    echo -e "${GREEN}   ✓ تم التبديل تلقائياً وبسلاسة إلى المنفذ الحر: ${BOLD}$PORT${NC}\n"
 fi
 
 # فتح المتصفح تلقائياً في الخلفية بعد بدء الخادم
