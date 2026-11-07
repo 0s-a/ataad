@@ -1,0 +1,151 @@
+CPU-Z TXT Report
+-------------------------------------------------------------------------
+
+Binaries
+-------------------------------------------------------------------------
+CPU-Z version			2.01.0.x64
+
+Processors
+-------------------------------------------------------------------------
+Number of sockets		1
+Number of threads		4
+
+APIC ID				0
+	Device			Processor
+	Name			Intel Core i7 4600M
+	Code Name		Haswell
+	Specification		Intel(R) Core(TM) i7-4600M CPU @ 2.90GHz
+	Package (platform ID)	Socket 947 rPGA (0x4)
+	CPUID			6.3.3
+	Extended CPUID		6.3C
+	Core Stepping		C0
+	Technology		22 nm
+	TDP Limit		37.0 Watts
+	Core Speed		2893.4 MHz
+	Multiplier x Bus Speed	29.0 x 99.8 MHz
+	Base frequency		99.8 MHz
+	Instructions		MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, EM64T, VT-x, AES, AVX, AVX2, FMA3
+	L1 Data cache		2 x 32 KBytes, 8-way set associative, 64-byte line size
+	L1 Instruction cache	2 x 32 KBytes, 8-way set associative, 64-byte line size
+	L2 cache		2 x 256 KBytes, 8-way set associative, 64-byte line size
+	L3 cache		4 MBytes, 16-way set associative, 64-byte line size
+	Max CPUID level		0000000Dh
+	Max CPUID ext. level	80000008h
+	FID/VID Control		yes
+
+APIC ID				1
+	Device			Processor
+	Name			Intel Core i7 4600M
+
+Chipset
+-------------------------------------------------------------------------
+Northbridge			Intel Haswell-ULT rev. 09
+Southbridge			Intel H8x/P8x rev. C2
+Memory Type			DDR3
+Memory Frequency		798.1 MHz (1:6)
+
+DMI
+-------------------------------------------------------------------------
+
+DMI BIOS
+	vendor			Dell Inc.
+	version			A18
+	date			05/19/2017
+	ROM size		12288 KB
+
+DMI System Info
+	manufacturer		Dell Inc.
+	product			Latitude E6440
+	version			01
+	serial			5N0GN12
+	UUID			{4C4C4544-004E-3010-8047-B5C04F4E3132}
+	SKU			Latitude E6440
+	family			Latitude
+
+DMI Baseboard
+	vendor			Dell Inc.
+	model			0K9GNV
+	revision		A00
+	serial			/5N0GN12/CN129634B40029/
+
+DMI System Enclosure
+	manufacturer		Dell Inc.
+	chassis type		Notebook
+	chassis serial		5N0GN12
+
+DMI Physical Memory Array
+	location		System Board
+	Use			System Memory
+	Error Correction	None
+	Max Capacity		16384 MBytes
+	Number of Devices	2
+
+DMI Memory Device
+	designation		DIMM_A
+	format			SODIMM
+	type			DDR3
+	total width		64 bits
+	data width		64 bits
+	size			4096 MBytes
+
+Memory SPD
+-------------------------------------------------------------------------
+
+DIMM #				1
+	SMBus address		0x50
+	Memory type		DDR3
+	Module format		SO-DIMM
+	Manufacturer (ID)	Samsung (CE00000000000000000000)
+	Size			4096 MBytes
+	Max bandwidth		PC3-12800 (800 MHz)
+	Part number		M471B5173DB0-YK0
+	Serial number		1770EBC2
+	Manufacturing date	Week 34/Year 14
+	Nominal Voltage		1.35 Volts
+
+DIMM #				2
+	SMBus address		0x52
+	Memory type		DDR3
+	Module format		SO-DIMM
+	Manufacturer (ID)	Samsung (CE00000000000000000000)
+	Size			4096 MBytes
+	Max bandwidth		PC3-12800 (800 MHz)
+	Part number		M471B5173DB0-YK0
+	Serial number		1770EC34
+	Manufacturing date	Week 34/Year 14
+	Nominal Voltage		1.35 Volts
+
+Storage
+-------------------------------------------------------------------------
+
+Drive 0
+	Name			SUPERSONIC256
+	Revision		T1130A0
+	Serial Number		VT256SS034636 VC08
+	Capacity		238.5 GB
+	Type			Fixed, SSD
+	Bus Type		SATA (11)
+
+Display Adapters
+-------------------------------------------------------------------------
+
+Display adapter 0
+	Name			Intel(R) HD Graphics 4600
+	Board Manufacturer	Dell
+	Vendor ID		0x8086
+	Model ID		0x0416
+	Memory size		1024 MB
+
+Display adapter 1
+	Name			AMD Radeon HD 8600M Series
+	Board Manufacturer	Dell
+	Vendor ID		0x1002
+	Model ID		0x6660
+	Memory size		2048 MB
+
+Software
+-------------------------------------------------------------------------
+
+Windows Version			Microsoft Windows 10 Professional 64-bit (Build 19045)
+DirectX Version			12.0
+
